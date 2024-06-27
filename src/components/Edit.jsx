@@ -144,8 +144,8 @@ const Edit = ({project}) => {
                 <img className="img-fluid" src={preview?preview:`${SERVERURL}/uploads/${project?.projectImg}`} alt="project-image"   />
               </label>
               {!imageFileStatus && (
-                <div className="text-warning fw-bolder my-2">
-                  *Upload Only the following types (jpeg,jpg,png)here!!!
+                <div className="text-dark fw-bolder my-2">
+                  &nbsp; &nbsp; &nbsp; Upload image here!!!
                 </div>
               )}
             </div>
@@ -154,7 +154,7 @@ const Edit = ({project}) => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Project Title"
+                  placeholder="News Title"
                   value={projectDetails.title}
                   onChange={(e) =>
                     setProjectDetails({
@@ -169,7 +169,7 @@ const Edit = ({project}) => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Languages used in Project"
+                  placeholder="Category"
                   value={projectDetails.languages}
                   onChange={(e) =>
                     setProjectDetails({
@@ -180,26 +180,13 @@ const Edit = ({project}) => {
                 />
               </div>
 
-              <div className="mb-2">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Project GITHUB Link"
-                  value={projectDetails.github}
-                  onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
-                      github: e.target.value,
-                    })
-                  }
-                />
-              </div>
+    
 
               <div className="mb-2">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Project WEBSITE Link"
+                  placeholder="Any Other Reference Link"
                   value={projectDetails.website}
                   onChange={(e) =>
                     setProjectDetails({
@@ -216,7 +203,7 @@ const Edit = ({project}) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Project Overview"
+              placeholder="Description"
               value={projectDetails.overview}
               onChange={(e) =>
                 setProjectDetails({

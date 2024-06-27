@@ -106,7 +106,7 @@ const Auth = ({insideRegister}) => {
 
         <div className="col-lg-6">
           <h1 className='fw-bolder mt-2'>
-            <i className='fa-brands fa-docker'></i>Project Fair
+          <i class="fa-solid fa-newspaper"></i>NewsGlobe
           </h1>
 
           <h5 className='fw-bolder mt-2'>

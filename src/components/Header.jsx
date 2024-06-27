@@ -12,6 +12,8 @@ function Header({ insideDashboard }) {
     navigate("/");
   };
   return (
+
+    
     <Navbar
       style={{ zIndex: "10px" }}
       expand="lg"
@@ -24,7 +26,7 @@ function Header({ insideDashboard }) {
             to={"/"}
             style={{ textDecoration: "none", color: "white" }}
           >  
-            <i className="fa-brands fa-docker" >Project Fair</i>
+          <i class="fa-solid fa-newspaper"></i>NewsGlobe
           </Link>
         </Navbar.Brand>
         {insideDashboard && (

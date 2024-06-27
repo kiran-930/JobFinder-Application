@@ -22,7 +22,7 @@ const Dashboard = () => {
      <div style={{marginTop:'100px'}} className="container-fluid">
       <div className="row mt-3">
         <div className="col-lg-8">
-        <h1>Welcome <span className='text-warning'>{username.split(" ")[0]}</span></h1> 
+        
         <View/>
         </div>
         <div className="col-lg-4">

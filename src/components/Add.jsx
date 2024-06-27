@@ -94,7 +94,7 @@ function Add() {
   return (
     <>
       <button onClick={handleShow} className="btn btn-primary">
-        <i className="fa-solid fa-plus"></i>New Project
+        <i className="fa-solid fa-plus"></i>Add Blog
       </button>
 
       <Modal
@@ -106,7 +106,7 @@ function Add() {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>View Project Details!!!</Modal.Title>
+          <Modal.Title>View Blog Details!!!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row align-items-center ">
@@ -125,8 +125,8 @@ function Add() {
                 <img className="img-fluid" src={preview} alt=""   />
               </label>
               {!imageFileStatus && (
-                <div className="text-warning fw-bolder my-2">
-                  *Upload Only the following types (jpeg,jpg,png)here!!!
+                <div className="text-dark fw-bolder my-2">
+                 &nbsp;  &nbsp;   &nbsp;   &nbsp;   &nbsp;   Upload image here!!
                 </div>
               )}
             </div>
@@ -135,7 +135,7 @@ function Add() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Project Title"
+                  placeholder="News Title"
                   value={projectDetails.title}
                   onChange={(e) =>
                     setProjectDetails({
@@ -150,7 +150,7 @@ function Add() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Languages used in Project"
+                  placeholder="Category"
                   value={projectDetails.languages}
                   onChange={(e) =>
                     setProjectDetails({
@@ -161,26 +161,13 @@ function Add() {
                 />
               </div>
 
-              <div className="mb-2">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Project GITHUB Link"
-                  value={projectDetails.github}
-                  onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
-                      github: e.target.value,
-                    })
-                  }
-                />
-              </div>
+             
 
               <div className="mb-2">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Project WEBSITE Link"
+                  placeholder="Any Other Reference Link"
                   value={projectDetails.website}
                   onChange={(e) =>
                     setProjectDetails({
@@ -197,7 +184,7 @@ function Add() {
             <input
               type="text"
               className="form-control"
-              placeholder="Project Overview"
+              placeholder="Description"
               value={projectDetails.overview}
               onChange={(e) =>
                 setProjectDetails({

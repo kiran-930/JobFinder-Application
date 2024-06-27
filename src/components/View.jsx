@@ -65,8 +65,9 @@ const View = () => {
   return (
     <>
       <div className="d-flex justify-content-between mt-2">
-        <h2 className="text-warning">
-          All Projects
+        <h2 className="text-dark">
+         Your Blogs
+         <i class="fa-solid fa-turn-down"></i>
         </h2>
         <div><Add/></div>
       </div>
@@ -78,8 +79,7 @@ const View = () => {
             <h3>{project?.title}</h3>
             <div className="d-flex align-items-center">
               <div><Edit project={project} /></div>
-              <div className="btn"><a href={project?.github} target='_blank'>
-                <i className='fa-brands fa-github'></i></a></div>
+              
               <button onClick={()=>handleDeleteProject(project?._id)} className='btn text-danger'>
                 <i className="fa-solid fa-trash"></i>
               </button>
@@ -87,7 +87,7 @@ const View = () => {
           </div>
           ))
           :
-          <div className="fw-bolder text-warning">No Projects uploaded yet!!</div>
+          <div className="fw-bolder text-warning">No Blogs uploaded yet!!</div>
         }
       
       </div>

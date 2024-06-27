@@ -42,30 +42,62 @@ const Home = () => {
   }
   return (
     <>
+
+<nav class="navbar navbar-expand-lg  bg-success ">
+        <div class="mt-2 container-fluid">
+          
+          <a class="navbar-brand text-white fs-4 fst-italic" href="#"><i class="fa-solid fa-newspaper"></i>&nbsp;NewsBlog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav fst-italic fs-5 ms-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+              </li>
+          
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Blogs</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Contact</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Login</a>
+              </li>
+              
+              </ul>
+              
+          </div>
+        </div>
+      </nav>
+
     <div style={{minHeight:'100vh'}} className="d-flex justify-content-center align-items-center rounded shadow w-100">
         <div className="container">
                    <div className="row align-items-center">
                     <div className="col-lg-6">
-                    <h1 style={{fontSize:'80px'}}> <i className='fa-brands fa-docker'></i>Project Fair</h1>
+                    <h1 style={{fontSize:'60px'}}> <i class="fa-solid fa-newspaper"></i>Read the most <br />Intresting article</h1>
 
                     <p style={{textAlign:'justify'}}>
-                      One stop Destination for all Software Development Project. Where User can add and manage their projects. As well as access all Projects available in our website... What are you waiting for!!!
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     </p>
                     {
-                      sessionStorage.getItem("token") ?  <Link to="/dashboard" className='btn btn-warning'>MANAGE YOUR PROJECTS</Link> :  <Link to="/login" className='btn btn-warning'>START TO EXPLORE</Link>
+                      sessionStorage.getItem("token") ?  <Link to="/dashboard" className='btn btn-success'>MANAGE YOUR BLOGS</Link> :  <Link to="/login" className='btn btn-success'>START TO EXPLORE</Link>
                     }
                    
                     </div>
                     <div className="col-lg-6">
-                        <img style={{marginLeft:'130px'}} width={'400px'} src={landingImage} alt="landing-image" className='img-fluid' />
+                        <img style={{marginLeft:'130px'}} width={'400px'} src="https://cdn4.iconfinder.com/data/icons/academic-disciplines-color-sticker/64/current-events-512.png" alt="landing-image" className='img-fluid' />
                     </div>
                    </div>
         </div>
     </div>
 
     <div className="mt-5 text-center">
-    <h1 className='mb-5'>Explore Our Projects</h1>
-    <marquee>
+    <h1 className='mb-5'>Discover the Latest</h1>
+  
     <div className="d-flex">
       {
         homeProjects?.length>0 &&(
@@ -76,55 +108,16 @@ const Home = () => {
         ))
       }
       </div>
-    </marquee>
-    <button onClick={handleProject} className='btn btn-link mt-3'>CLICK HERE TO VIEW MORE PROJECTS...</button>
+<div>
+  
+</div>
+      
+    
+    <button onClick={handleProject} className='btn btn-link mt-3'>EXPLORE FURTHER NEWS..</button>
     </div>
  
 
-  <div className="d-flex align-items-center mt-5 flex-column ">
-  <h1>Our Testimonials</h1>
-  <div className="d-flex align-items-center justify-content-evenly mt-3 w-100 " style={{paddingBottom:'3em'}}>
-
-<Card style={{ width: '18rem', paddingTop:'1em'} }>
-  <img style={{alignSelf:"center"}
-  } width={'60px'} height={'60px'} className='rounded-circle img-fluid' src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-
-<Card style={{ width: '18rem' , paddingTop:'1em'  }}>
-  <img style={{alignSelf:"center"}
-  } width={'60px'} height={'60px'} className='rounded-circle img-fluid' src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Picture.png" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-
-<Card style={{ width: '18rem',paddingTop:'1em'   }}>
-  <img style={{alignSelf:"center"}
-  } width={'60px'} height={'60px'} className='rounded-circle img-fluid' src="https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the
-      bulk of the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-</div>
-  </div>
+  
   <ToastContainer />
     </>
   )
