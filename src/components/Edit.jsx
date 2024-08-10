@@ -101,7 +101,7 @@ const Edit = ({project}) => {
               //pass response view
               setEditResponse(result)
              }else{
-              console.log(result.response);
+              console.log(result.response.data);
              }
            }catch(err){
             console.log(err);
@@ -125,7 +125,7 @@ const Edit = ({project}) => {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>New Project Details!!</Modal.Title>
+          <Modal.Title>New Job Details!!</Modal.Title>
         </Modal.Header>
        \  <Modal.Body>
           <div className="row align-items-center ">
@@ -154,7 +154,7 @@ const Edit = ({project}) => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="News Title"
+                  placeholder="Job Title"
                   value={projectDetails.title}
                   onChange={(e) =>
                     setProjectDetails({
@@ -169,7 +169,7 @@ const Edit = ({project}) => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Category"
+                  placeholder="Job Position"
                   value={projectDetails.languages}
                   onChange={(e) =>
                     setProjectDetails({
@@ -180,13 +180,27 @@ const Edit = ({project}) => {
                 />
               </div>
 
+              <div className="mb-2">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Job Apply Link"
+                  value={projectDetails.github}
+                  onChange={(e) =>
+                    setProjectDetails({
+                      ...projectDetails,
+                      github: e.target.value,
+                    })
+                  }
+                />
+              </div>
     
 
               <div className="mb-2">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Any Other Reference Link"
+                  placeholder="Company Link"
                   value={projectDetails.website}
                   onChange={(e) =>
                     setProjectDetails({
@@ -203,7 +217,7 @@ const Edit = ({project}) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Description"
+              placeholder="Skills"
               value={projectDetails.overview}
               onChange={(e) =>
                 setProjectDetails({

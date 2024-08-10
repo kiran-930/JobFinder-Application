@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div
+    <section id='contact'>
+      <div
     className="footer rounded shadow "
     style={{ padding: "30px ", color: "black", h5: "black" }}
   >
@@ -12,18 +13,18 @@ const Footer = () => {
       <div className="d-flex justify-content-between">
         <div style={{ width: "400px" }} className="intro">
           <h5 style={{ color: "black" }}>
-          <i class="fa-solid fa-newspaper"></i>
-            &nbsp; NewsGlobe
+          <i class="fa-solid fa-briefcase"></i>
+            &nbsp;CareerConnect
           </h5>
           <p>
-          Never miss a headline with our news blog app. Get the latest updates, in-depth articles, and breaking news alerts right at your fingertips. Download now and stay connected to the stories that matter most to you!
+          "Explore a wide range of job categories, manage your job postings effortlessly, and stay updated with the latest career advice. Join us today and take the next step in your career journey."
           </p>
           <p> ipsum dolor sit amet, consectetur adipiscing elit</p>
           <p>Currenlty v1.0.0.</p>
         </div>
         <div className="links d-flex flex-column">
-          <h5>Links</h5>
-          <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
+          <h5 className='text-info'>Links</h5>
+          <Link to={"/home"} style={{ textDecoration: "none", color: "black" }}>
             Home
           </Link>
           <Link
@@ -41,7 +42,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="guides d-flex flex-column">
-          <h5>Guides</h5>
+          <h5 className='text-info'>Guides</h5>
           <a
             href="https://react.dev/"
             style={{ textDecoration: "none", color: "black" }}
@@ -67,16 +68,16 @@ const Footer = () => {
           </a>
         </div>
         <div className="contact  d-flex flex-column">
-          <h5>Contact Us</h5>
+          <h5 className='text-info'>Contact Us</h5>
           <div className="d-flex">
             <input
               type="text"
               placeholder="Enter Your email here "
               className="form-control"
             />
-            <button style={{border:'none',marginLeft:'5px'}} className="btns bg-success p-2">
+            <button style={{border:'none',marginLeft:'5px'}} className="btns bg-info p-2">
               {" "}
-              <i className="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right text-white"></i>
             </button>
           </div>
           <div className="icons d-flex justify-content-between mt-3">
@@ -120,17 +121,13 @@ const Footer = () => {
       </div>
       <p className="text-center mt-5">
       Feel free to customize the links and contact details as needed!
-      
-
-
-
-
-
-
-      </p>
+</p>
     </div>
   </div>
   
+    </section>
+    
+    
   )
 }
 

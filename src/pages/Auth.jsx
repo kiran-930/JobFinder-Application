@@ -106,7 +106,7 @@ const Auth = ({insideRegister}) => {
 
         <div className="col-lg-6">
           <h1 className='fw-bolder mt-2'>
-          <i class="fa-solid fa-newspaper"></i>NewsGlobe
+          <i class="fa-solid fa-briefcase"></i>CareerConnect
           </h1>
 
           <h5 className='fw-bolder mt-2'>
@@ -140,7 +140,7 @@ const Auth = ({insideRegister}) => {
 
             <div className="mt-3">
               <button onClick={handleRegister} className='btn btn-primary mb-2'>Register</button>
-              <p>Already have an account? Click here to <Link to={'/login'}>Login</Link></p>
+              <p >Already have an account? Click here to <Link to={'/login'}>Login</Link></p>
             </div>
             :
             <div className="mt-3">

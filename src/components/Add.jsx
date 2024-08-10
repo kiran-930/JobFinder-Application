@@ -93,8 +93,8 @@ function Add() {
 
   return (
     <>
-      <button onClick={handleShow} className="btn btn-primary">
-        <i className="fa-solid fa-plus"></i>Add Blog
+      <button onClick={handleShow} className="btn btn-warning">
+        <i className="fa-solid fa-plus"></i>Post New Job
       </button>
 
       <Modal
@@ -106,7 +106,7 @@ function Add() {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>View Blog Details!!!</Modal.Title>
+          <Modal.Title>View Job Details!!!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row align-items-center ">
@@ -135,7 +135,7 @@ function Add() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="News Title"
+                  placeholder="Job Title"
                   value={projectDetails.title}
                   onChange={(e) =>
                     setProjectDetails({
@@ -150,12 +150,28 @@ function Add() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Category"
+                  placeholder="Job Position"
                   value={projectDetails.languages}
                   onChange={(e) =>
                     setProjectDetails({
                       ...projectDetails,
                       languages: e.target.value,
+                    })
+                  }
+                />
+              </div>
+
+
+              <div className="mb-2">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Job Apply Link"
+                  value={projectDetails.github}
+                  onChange={(e) =>
+                    setProjectDetails({
+                      ...projectDetails,
+                      github: e.target.value,
                     })
                   }
                 />
@@ -167,7 +183,7 @@ function Add() {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Any Other Reference Link"
+                  placeholder="Company Website Link"
                   value={projectDetails.website}
                   onChange={(e) =>
                     setProjectDetails({
@@ -184,7 +200,7 @@ function Add() {
             <input
               type="text"
               className="form-control"
-              placeholder="Description"
+              placeholder="Skills Needed"
               value={projectDetails.overview}
               onChange={(e) =>
                 setProjectDetails({

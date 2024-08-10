@@ -26,7 +26,7 @@ function Header({ insideDashboard }) {
             to={"/"}
             style={{ textDecoration: "none", color: "white" }}
           >  
-          <i class="fa-solid fa-newspaper"></i>NewsGlobe
+          <i class="fa-solid fa-briefcase"></i>CareerConnect
           </Link>
         </Navbar.Brand>
         {insideDashboard && (
@@ -34,7 +34,7 @@ function Header({ insideDashboard }) {
             <button
               onClick={handleLogout}
               style={{ textDecoration: "none" }}
-              className="btn btn-link fw-bolder"
+              className="btn btn-link fw-bolder text-danger"
             >
               LogOut <i className="fa-solid fa-right-from-bracket"></i>
             </button>

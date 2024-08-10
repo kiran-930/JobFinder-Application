@@ -40,8 +40,8 @@ const Projects = () => {
     <Header/>
     <div style={{marginTop:'150px'}} className="container-fluid">
           <div className="w-75 d-flex justify-content-between">
-            <h1>All Blogs</h1>
-            <input onChange={e=>setSearchKey(e.target.value)} type="text" className='form-control w-50' placeholder='Search Blogs By Category' />
+            <h1 className='text-info'>All Job Vacancies</h1>
+            <input onChange={e=>setSearchKey(e.target.value)} type="text" className='form-control w-50' placeholder='Search Jobs by Position' />
           </div>
 
           <Row className='mt-3'>
@@ -54,7 +54,7 @@ const Projects = () => {
           ))
           :
           <div className="fw-bolder text-danger m-5 text-canter">
-            Blog Not found!!
+            Job Not found!!
           </div>
         }
           </Row>

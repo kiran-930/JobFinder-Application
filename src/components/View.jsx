@@ -11,7 +11,7 @@ const View = () => {
   const [userProjects,setUserProjects]=useState([])
   const {addResponse,setAddResponse}=useContext(addResponseContext)
 
-    //console.log(userProjects);
+    console.log(userProjects);
 
   useEffect(()=>{
     getUserProjects()
@@ -66,7 +66,7 @@ const View = () => {
     <>
       <div className="d-flex justify-content-between mt-2">
         <h2 className="text-dark">
-         Your Blogs
+         Your Posted Jobs
          <i class="fa-solid fa-turn-down"></i>
         </h2>
         <div><Add/></div>
@@ -87,7 +87,7 @@ const View = () => {
           </div>
           ))
           :
-          <div className="fw-bolder text-warning">No Blogs uploaded yet!!</div>
+          <div className="fw-bolder text-warning">No Jobs uploaded yet!!</div>
         }
       
       </div>
