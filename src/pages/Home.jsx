@@ -61,7 +61,7 @@ const Home = () => {
                 
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="/login">Login</a>
+                <a class="nav-link text-white" aria-current="page"><Link to="/login">Login</Link></a>
               </li>
               
               </ul>
