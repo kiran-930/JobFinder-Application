@@ -24,9 +24,9 @@ function Header({ insideDashboard }) {
           <Link
             className="fw-bolder"
             to={"/"}
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "blue" }}
           >  
-          <i class="fa-solid fa-briefcase"></i>CareerConnect
+          <i class="fa-solid fa-briefcase ms-1"></i>CareerConnect
           </Link>
         </Navbar.Brand>
         {insideDashboard && (

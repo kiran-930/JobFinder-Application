@@ -1,4 +1,4 @@
-const SERVERURL = "http://localhost:4005"
+const SERVERURL = "https://jobfinder-server-1.onrender.com"
 
 export default SERVERURL
 

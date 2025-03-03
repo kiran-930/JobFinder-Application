@@ -64,7 +64,7 @@ const View = () => {
   }
   return (
     <>
-      <div className="d-flex justify-content-between mt-2">
+      <div className="d-flex justify-content-between mt-5">
         <h2 className="text-dark">
          Your Posted Jobs
          <i class="fa-solid fa-turn-down"></i>

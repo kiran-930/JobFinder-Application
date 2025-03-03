@@ -45,10 +45,10 @@ const ProjectCart = ({displayData}) => {
        <br/>
         Apply Now <i class="fa-solid fa-arrow-right"></i>
 
-       <a href={displayData?.github} target='_blank' className='btn btn-success ms-2'> <i class="fa-solid fa-link"></i></a>
+       <a href={'./applyform'} className='btn btn-success ms-2'> <i class="fa-solid fa-link"></i></a>
        About Company <i class="fa-solid fa-arrow-right"></i>
 
-       <a href={displayData?.website} target='_blank' className='btn btn-danger ms-2'> <i class="fa-solid fa-link"></i></a>
+       <a href={displayData?.website} className='btn btn-danger ms-2'> <i class="fa-solid fa-link"></i></a>
 
         </div>
         

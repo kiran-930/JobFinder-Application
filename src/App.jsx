@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Dashboard from './pages/Dashboard'
 import Footer from './components/Footer'
 import { tokenAuthContext } from './contexts/AuthContext'
+import ApplyForm from './components/ApplyForm'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Route path='/projects' element={isAuthorised?<Projects />:<Navigate to={'./login'}/>} />
     <Route path='/dashboard' element={isAuthorised?<Dashboard />:<Navigate to={'/login'}/>} />
     <Route path='/*' element={<Navigate to={'/'}/>}/>
+    <Route path='/applyform' element={<ApplyForm />}/>
     </Routes>
      <Footer/>
    </>

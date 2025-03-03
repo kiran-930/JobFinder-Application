@@ -21,11 +21,11 @@ const Dashboard = () => {
      <Header insideDashboard={true}/>
      <div style={{marginTop:'100px'}} className="container-fluid">
       <div className="row mt-3">
-        <div className="col-lg-8">
+        <div className="col-lg-10 p-4 m-2">
         
         <View/>
         </div>
-        <div className="col-lg-4">
+        <div className="col-lg-2">
           <Profile/>
         </div>
       </div>

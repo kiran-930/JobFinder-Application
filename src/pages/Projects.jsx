@@ -39,8 +39,7 @@ const Projects = () => {
     <>
     <Header/>
     <div style={{marginTop:'150px'}} className="container-fluid">
-          <div className="w-75 d-flex justify-content-between">
-            <h1 className='text-info'>All Job Vacancies</h1>
+          <div className="w-100 d-flex justify-content-center align-items-center">
             <input onChange={e=>setSearchKey(e.target.value)} type="text" className='form-control w-50' placeholder='Search Jobs by Position' />
           </div>
 
