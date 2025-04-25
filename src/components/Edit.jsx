@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import uploadingImg from '../assets/upload.png'
 import SERVERURL from '../services/serverurl';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +11,7 @@ import { editResponseContext } from '../contexts/ContextAPI';
 const Edit = ({project}) => {
   const {editResponse,setEditResponse} = useContext(editResponseContext)
   const [imageFileStatus, setImageFileStatus] = useState(true);
-  const [projectDetails,setProjectDetails] = useState({
+  const [JobDetails,setJobDetails] = useState({
     id:project?._id,
     title:project?.title ,
     languages: project?.languages,
@@ -27,7 +26,7 @@ const Edit = ({project}) => {
 
   const handleClose = () => {
     setShow(false)
-    setProjectDetails({id: project?._id, title: project?.title,
+    setJobDetails({id: project?._id, title: project?.title,
       languages: project?.languages,
       github: project?.github,
       website: project?.website,
@@ -38,7 +37,7 @@ const Edit = ({project}) => {
   };
   const handleShow = () => {
     setShow(true);
-    setProjectDetails({id: project?._id, title: project?.title,
+    setJobDetails({id: project?._id, title: project?.title,
       languages: project?.languages,
       github: project?.github,
       website: project?.website,
@@ -49,18 +48,18 @@ const Edit = ({project}) => {
   }
 
   useEffect(() => {
-    if(projectDetails.projectImg.type == "image/png" ||
-      projectDetails.projectImg.type == "image/jpg" ||
-      projectDetails.projectImg.type == "image/jpeg")
+    if(JobDetails.projectImg.type == "image/png" ||
+      JobDetails.projectImg.type == "image/jpg" ||
+      JobDetails.projectImg.type == "image/jpeg")
       {
-      setPreview(URL.createObjectURL(projectDetails.projectImg))
+      setPreview(URL.createObjectURL(JobDetails.projectImg))
       setImageFileStatus(true)
     }else{
       setImageFileStatus(false)
       setPreview("")
-      setProjectDetails({...projectDetails,projectImg:""})
+      setJobDetails({...JobDetails,projectImg:""})
     }
-  },[projectDetails.projectImg])
+  },[JobDetails.projectImg])
 
   const handleUpdateProject = async ()=>{
      const {id,title,
@@ -68,7 +67,7 @@ const Edit = ({project}) => {
       github,
       website,
       overview,
-      projectImg} = projectDetails
+      projectImg} = JobDetails
       if(title &&
         languages &&
         github &&
@@ -135,8 +134,8 @@ const Edit = ({project}) => {
                   type="file"
                   style={{ display: "none" }}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       projectImg: e.target.files[0],
                     })
                   }
@@ -155,10 +154,10 @@ const Edit = ({project}) => {
                   type="text"
                   className="form-control"
                   placeholder="Job Title"
-                  value={projectDetails.title}
+                  value={JobDetails.title}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       title: e.target.value,
                     })
                   }
@@ -170,10 +169,10 @@ const Edit = ({project}) => {
                   type="text"
                   className="form-control"
                   placeholder="Job Position"
-                  value={projectDetails.languages}
+                  value={JobDetails.languages}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       languages: e.target.value,
                     })
                   }
@@ -185,10 +184,10 @@ const Edit = ({project}) => {
                   type="text"
                   className="form-control"
                   placeholder="Job Apply Link"
-                  value={projectDetails.github}
+                  value={JobDetails.github}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       github: e.target.value,
                     })
                   }
@@ -201,10 +200,10 @@ const Edit = ({project}) => {
                   type="text"
                   className="form-control"
                   placeholder="Company Link"
-                  value={projectDetails.website}
+                  value={JobDetails.website}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       website: e.target.value,
                     })
                   }
@@ -218,10 +217,10 @@ const Edit = ({project}) => {
               type="text"
               className="form-control"
               placeholder="Skills"
-              value={projectDetails.overview}
+              value={JobDetails.overview}
               onChange={(e) =>
-                setProjectDetails({
-                  ...projectDetails,
+                setJobDetails({
+                  ...JobDetails,
                   overview: e.target.value,
                 })
               }

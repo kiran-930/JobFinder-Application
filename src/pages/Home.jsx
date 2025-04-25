@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import landingImage from '../landingImage.svg'
 import ProjectCart from '../components/ProjectCart'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { homeProjectAPI } from '../services/allAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import landing from '../assets/landing.png' 
+
 
 const Home = () => {
   const [homeProjects,setHomeProjects] = useState([])
@@ -33,7 +32,7 @@ const Home = () => {
      if(sessionStorage.getItem("token")){
              navigate('/projects')
      }else{
-      toast.warning("Please login to get full access to our projects!!")
+      toast.warning("Please log in to explore all available opportunities!")
      }
   }
   return (
@@ -74,10 +73,11 @@ const Home = () => {
         <div className="container">
                    <div className="row align-items-center">
                     <div className="col-lg-6 ">
-                    <h1 className='text-dark' style={{fontSize:'60px'}}> <i class="fa-solid fa-briefcase text-secondary"></i>Your next job, <br />just a rental away.</h1>
+                    <h1 className='text-dark' style={{fontSize:'55px'}}> <i class="fa-solid fa-briefcase text-secondary"></i>Your next job, <br />just a rental away.</h1>
 
-                    <p style={{textAlign:'justify'}}>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    <p style={{textAlign:'justify'}}><br />
+                    "Your dream job doesn't exist — you have to build it.
+                    Success starts when you dare to create the career you deserve."
                     </p>
                     {
                       sessionStorage.getItem("token") ?  <Link to="/dashboard" className='btn btn-info'>Manage Your Job Posts</Link> :  <Link to="/login" className='btn btn-info'>START TO EXPLORE</Link>
@@ -85,7 +85,7 @@ const Home = () => {
                    
                     </div>
                     <div className="col-lg-6">
-                        <img style={{marginLeft:'130px'}} width={'800px'} src="https://www.jobs.best/storage/general/how-best-jobs-works-02.jpg" alt="landing-image" className='img-fluid' />
+                        <img style={{marginLeft:'50px'}} width={'500px'} src={landing} alt="landing-image" className='img-fluid' />
                     </div>
                    </div>
         </div>

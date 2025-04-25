@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import loginImg from '../assets/login.png'
+import loginImg from '../assets/login.png' 
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { loginAPI, registerAPI } from '../services/allAPI';
 import { Spinner } from 'react-bootstrap';
-import AuthContext, { tokenAuthContext } from '../contexts/AuthContext';
+import  { tokenAuthContext } from '../contexts/AuthContext';
 
 
 

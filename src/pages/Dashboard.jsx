@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import View from '../components/View'
-import Profile from '../components/Profile'
 
 
 
@@ -26,7 +25,6 @@ const Dashboard = () => {
         <View/>
         </div>
         <div className="col-lg-2">
-          <Profile/>
         </div>
       </div>
      </div>

@@ -10,7 +10,7 @@ function Add() {
   const {addResponse,setAddResponse} = useContext(addResponseContext)
   const [preview,setPreview] = useState(uploadImg)
   const [imageFileStatus, setImageFileStatus] = useState(false);
-  const [projectDetails, setProjectDetails] = useState({
+  const [JobDetails, setJobDetails] = useState({
     title: "",
     languages: "",
     github: "",
@@ -19,12 +19,12 @@ function Add() {
     projectImg: ""
   });
 
-  //console.log(projectDetails);
+  //console.log(JobDetails);
 
   const [show, setShow] = useState(false);
   const handleClose = () =>{
     setShow(false);
-    setProjectDetails({ title: "",
+    setJobDetails({ title: "",
       languages: "",
       github: "",
       website: "",
@@ -36,23 +36,23 @@ function Add() {
 
   useEffect(() => {
     if (
-      projectDetails.projectImg.type == "image/png" ||
-      projectDetails.projectImg.type == "image/jpg" ||
-      projectDetails.projectImg.type == "image/jpeg"
+      JobDetails.projectImg.type == "image/png" ||
+      JobDetails.projectImg.type == "image/jpg" ||
+      JobDetails.projectImg.type == "image/jpeg"
     ) {
       setImageFileStatus(true);
-      setPreview(URL.createObjectURL(projectDetails.projectImg))
+      setPreview(URL.createObjectURL(JobDetails.projectImg))
     } else {
       setImageFileStatus(false);
       setPreview(uploadImg)
-      setProjectDetails({ ...projectDetails, projectImg: "" });
+      setJobDetails({ ...JobDetails, projectImg: "" });
     }
-  }, [projectDetails.projectImg]);
+  }, [JobDetails.projectImg]);
 
   const handleAddProject = async () => {
     const {title,languages,github,website,overview,projectImg
-    } = projectDetails
-    if(projectDetails.title && projectDetails.languages && projectDetails.github && projectDetails.website && projectDetails.overview && projectDetails.projectImg)
+    } = JobDetails
+    if(JobDetails.title && JobDetails.languages && JobDetails.github && JobDetails.website && JobDetails.overview && JobDetails.projectImg)
     {
       //api call-reqbody, reqheader
       //reqbody - add items to form data
@@ -116,8 +116,8 @@ function Add() {
                   type="file"
                   style={{ display: "none" }}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       projectImg: e.target.files[0],
                     })
                   }
@@ -136,10 +136,10 @@ function Add() {
                   type="text"
                   className="form-control"
                   placeholder="Job Title"
-                  value={projectDetails.title}
+                  value={JobDetails.title}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       title: e.target.value,
                     })
                   }
@@ -151,10 +151,10 @@ function Add() {
                   type="text"
                   className="form-control"
                   placeholder="Job Position"
-                  value={projectDetails.languages}
+                  value={JobDetails.languages}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       languages: e.target.value,
                     })
                   }
@@ -167,10 +167,10 @@ function Add() {
                   type="text"
                   className="form-control"
                   placeholder="Job Apply Link"
-                  value={projectDetails.github}
+                  value={JobDetails.github}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       github: e.target.value,
                     })
                   }
@@ -184,10 +184,10 @@ function Add() {
                   type="text"
                   className="form-control"
                   placeholder="Company Website Link"
-                  value={projectDetails.website}
+                  value={JobDetails.website}
                   onChange={(e) =>
-                    setProjectDetails({
-                      ...projectDetails,
+                    setJobDetails({
+                      ...JobDetails,
                       website: e.target.value,
                     })
                   }
@@ -201,10 +201,10 @@ function Add() {
               type="text"
               className="form-control"
               placeholder="Skills Needed"
-              value={projectDetails.overview}
+              value={JobDetails.overview}
               onChange={(e) =>
-                setProjectDetails({
-                  ...projectDetails,
+                setJobDetails({
+                  ...JobDetails,
                   overview: e.target.value,
                 })
               }
